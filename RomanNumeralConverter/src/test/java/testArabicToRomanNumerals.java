@@ -1,5 +1,8 @@
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertEquals;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class testArabicToRomanNumerals {
@@ -8,12 +11,12 @@ public class testArabicToRomanNumerals {
 	
 	@Before
 	public void setup() {
-		converter = new RomanConverter;
+		converter = new RomanConverter();
 	}
 	
 	@After
 	public void teardown() {
-		converter = null;
+		
 	}
 	
 	@Test
@@ -21,4 +24,15 @@ public class testArabicToRomanNumerals {
 		assertNotNull(converter);
 	}
 
+	@Test
+	public void testGivenOne() {
+		int input = 1;
+		String expectedValue = "I";
+		String actualValue;
+		
+		actualValue = converter.convertToRomanNumerals(input);
+		
+		assertEquals(expectedValue, actualValue);
+	}
+	
 }
