@@ -7,9 +7,9 @@ public class RomanConverter {
 		String output = "";
 		
 		while(input > 0) { 
-			output += "I"; 
-			input--;
-			
+//			output += "I"; 
+//			input--;
+//			
 //				switch(input) {
 //				case 5:
 //					output += "V";
@@ -22,8 +22,10 @@ public class RomanConverter {
 //
 //				}
 			//^ change to ifs and use continues.
-				
-			}
+			//example:
+			if( (input - 5) >= 0 ){output += "V"; input -= 5; continue; }
+			output += "I"; input -= 1;
+		}
 		
 		
 		return output;

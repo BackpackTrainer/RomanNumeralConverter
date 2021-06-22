@@ -16,7 +16,7 @@ public class testArabicToRomanNumerals {
 	
 	@After
 	public void teardown() {
-		
+		converter = null;
 	}
 	
 	@Test
