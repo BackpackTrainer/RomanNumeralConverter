@@ -35,4 +35,37 @@ public class testArabicToRomanNumerals {
 		assertEquals(expectedValue, actualValue);
 	}
 	
+	@Test
+	public void testGivenTwo() {
+		int input = 2;
+		String expectedValue = "II";
+		String actualValue;
+		
+		actualValue = converter.convertToRomanNumerals(input);
+		
+		assertEquals(expectedValue, actualValue);
+	}
+	
+	@Test
+	public void testGivenFour() {
+		int input = 1;
+		String expectedValue = "IV";
+		String actualValue;
+		
+		actualValue = converter.convertToRomanNumerals(input);
+		
+		assertEquals(expectedValue, actualValue);
+	}
+	
+	@Test
+	public void testGivenFive() {
+		int input = 5;
+		String expectedValue = "V";
+		String actualValue;
+		
+		actualValue = converter.convertToRomanNumerals(input);
+		
+		assertEquals(expectedValue, actualValue);
+	}
+	
 }
