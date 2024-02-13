@@ -35,4 +35,13 @@ public class RomanToArabicTests {
 
         assertEquals(expectedResult, result);
     }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "Complete Roman to Arabic.csv", numLinesToSkip = 1)
+    public void translateAll(String input, int expectedResult){
+
+        result = UUT.translate(input);
+
+        assertEquals(expectedResult, result);
+    }
 }
